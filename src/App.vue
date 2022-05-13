@@ -34,7 +34,7 @@
             :key="item"
             class="itemres"
             :style="resCardStyle"
-            :data-id="list.find((d) => d.key === item).name"
+            :data-id="item"
             @click="showRes = false"
             :class="{
               numberOver:
@@ -46,7 +46,7 @@
               <span
                 v-if="!!list.find((d) => d.key === item)"
                 :style="{
-                  fontSize: '40px',
+                  fontSize: '20px',
                 }"
               >
                 {{ list.find((d) => d.key === item).name }}
@@ -115,7 +115,7 @@ import LotteryConfig from '@/components/LotteryConfig';
 import Publicity from '@/components/Publicity';
 import Tool from '@/components/Tool';
 import bgaudio from '@/assets/bg.mp3';
-import beginaudio from '@/assets/begin.mp3';
+import beginaudio from '@/assets/好运来.mp3';
 import {
   getData,
   configField,
@@ -178,7 +178,6 @@ export default {
       const randomShowNums = luckydrawHandler(configNum, [], nums);
       const randomShowDatas = randomShowNums.map((item) => {
         const listData = this.list.find((d) => d.key === item);
-        console.log(listData);
         const photo = this.photos.find((d) => d.id === item);
         return {
           key: item * (number > 1500 ? 3 : 1),
@@ -354,7 +353,6 @@ export default {
           num
         );
         this.resArr = resArr;
-        console.log(resArr);
         this.category = category;
         if (!this.result[category]) {
           this.$set(this.result, category, []);
@@ -366,6 +364,7 @@ export default {
         this.result = data;
         window.TagCanvas.SetSpeed('rootcanvas', [5, 1]);
         this.running = !this.running;
+        console.log(this.running);
       }
     },
   },

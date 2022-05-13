@@ -1,7 +1,5 @@
 ## 年会抽奖
 
-地址:https://lucky.yanghuan.site
-
 ## 抽奖算法
 
 `/src/helper/algorithm.js`

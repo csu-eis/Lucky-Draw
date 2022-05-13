@@ -37,7 +37,9 @@
           :key="j"
           :data-res="data"
         >
-          {{ data }}
+
+            {{!!nameList.find((d) => d.key === data) ? nameList.find((d) => d.key === data).name : data }}
+
         </span>
       </span>
     </div>
@@ -59,8 +61,12 @@ export default {
         this.$store.commit('setResult', val);
       }
     },
+    nameList() {
+      return this.$store.state.list;
+    },
     resultList() {
       const list = [];
+      console.log(this.result);
       for (const key in this.result) {
         if (this.result.hasOwnProperty(key)) {
           const element = this.result[key];
