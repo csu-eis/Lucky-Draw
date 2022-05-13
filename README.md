@@ -1,8 +1,26 @@
 ## 年会抽奖
 
-[演示地址](https://vitozyf.github.io/lucky-draw/index.html#/?tdsourcetag=s_pctim_aiomsg)
+地址: luckydraw.yanghuan.site
+
+## 抽奖算法
+
+`/src/helper/algorithm.js`
 
 ## 使用说明
+
+### 安装
+
+```
+npm install
+```
+
+### 运行
+
+```
+npm run dev
+```
+
+
 
 ### 配置建议
 
