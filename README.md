@@ -1,6 +1,6 @@
 ## 年会抽奖
 
-地址: luckydraw.yanghuan.site
+地址:https://lucky.yanghuan.site
 
 ## 抽奖算法
 
